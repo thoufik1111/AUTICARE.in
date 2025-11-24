@@ -1,0 +1,7 @@
+project_id = "jdmgwvewvaluchnvlkzd"
+
+[functions.send-notification]
+verify_jwt = false
+
+[functions.predict-video]
+verify_jwt = false

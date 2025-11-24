@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --gradient-start: 204 100% 97%;
+    --gradient-end: 48 100% 97%;
+    --foreground: 210 70% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 70% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 70% 15%;
+
+    /* AutiCare Color System */
+    --bright-blue: 207 100% 59%;
+    --bright-blue-foreground: 0 0% 100%;
+    
+    --coral: 0 100% 71%;
+    --coral-foreground: 0 0% 100%;
+    
+    --lavender: 250 100% 90%;
+    --lavender-foreground: 210 70% 15%;
+    
+    --mint: 162 67% 68%;
+    --mint-foreground: 210 70% 15%;
+
+    /* Semantic Mappings */
+    --primary: 207 100% 59%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 70% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 162 67% 68%;
+    --accent-foreground: 210 70% 15%;
+
+    --destructive: 0 100% 71%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 207 100% 59%;
+
+    --radius: 1rem;
+
+    /* Severity Colors */
+    --severity-low: 162 67% 68%;
+    --severity-mild: 207 100% 59%;
+    --severity-moderate: 250 100% 90%;
+    --severity-high: 0 100% 71%;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+/* Accessibility: High Contrast Mode */
+.high-contrast {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 0%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --primary: 210 100% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 20%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 90%;
+  --muted-foreground: 0 0% 10%;
+  --accent: 0 0% 85%;
+  --accent-foreground: 0 0% 0%;
+  --border: 0 0% 30%;
+  --input: 0 0% 30%;
+  --ring: 210 100% 40%;
+}
+
+/* Accessibility: Dark Theme */
+.dark-theme {
+  --background: 222 47% 11%;
+  --gradient-start: 222 47% 11%;
+  --gradient-end: 222 47% 15%;
+  --foreground: 210 40% 98%;
+  
+  --card: 222 47% 15%;
+  --card-foreground: 210 40% 98%;
+  
+  --popover: 222 47% 15%;
+  --popover-foreground: 210 40% 98%;
+  
+  --primary: 207 100% 59%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 217 32% 17%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --muted: 217 32% 17%;
+  --muted-foreground: 215 20% 65%;
+  
+  --accent: 162 67% 68%;
+  --accent-foreground: 222 47% 11%;
+  
+  --destructive: 0 100% 71%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 217 32% 20%;
+  --input: 217 32% 20%;
+  --ring: 207 100% 59%;
+}

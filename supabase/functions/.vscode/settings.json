@@ -1,0 +1,21 @@
+{
+  // ENABLE DENO ONLY inside supabase/functions
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+
+  // DISABLE DENO for everything else
+  "deno.disablePaths": [
+    "src",
+    "public",
+    "node_modules",
+    "supabase/migrations"
+  ],
+
+  "deno.enable": true,
+  "deno.unstable": true,
+
+  // Better TypeScript experience
+  "typescript.validate.enable": false,
+  "javascript.validate.enable": false
+}
